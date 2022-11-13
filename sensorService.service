@@ -1,0 +1,15 @@
+[Unit]
+Description=Python script that get data from sensor as UART
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/home/andorean/Desktop/UARTDemo/
+ExecStart=/usr/bin/python3 /home/andorean/Desktop/UARTDemo/uart_example.py
+Restart=always
+Nice=19
+LimitNOFILE=infinity
+
+[Install]
+WantedBy=multi-user.target
